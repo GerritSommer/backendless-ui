@@ -1,0 +1,18 @@
+{{page-title 'Files'}}
+<nav>
+  <ul>
+    <li>
+      <LinkTo @route="authenticated.files.upload">
+        Upload
+      </LinkTo>
+    </li>
+  </ul>
+</nav>
+{{outlet}}
+<ul>
+  {{#each @model as |file|}}
+    <li>
+      {{file.name}}
+    </li>
+  {{/each}}
+</ul>

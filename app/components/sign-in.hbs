@@ -1,0 +1,17 @@
+<form {{on 'submit' this.signIn}}>
+  <div>
+    <label for="sign-in-email">
+      Email
+    </label>
+    <Input id="sign-in-email" @type="email" @value={{this.email}} />
+  </div>
+  <div>
+    <label for="sign-in-password">
+      Password
+    </label>
+    <Input id="sign-in-password" @type="password" @value={{this.password}} />
+  </div>
+  <button type="submit">
+    Sign in
+  </button>
+</form>

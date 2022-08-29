@@ -1,7 +1,22 @@
-{{page-title "BackendlessUi"}}
-
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
+{{page-title 'BackendlessUi'}}
+<nav>
+  {{#if this.session.isAuthenticated}}
+    <ul>
+      <li>
+        <LinkTo @route="authenticated.files">
+          Files
+        </LinkTo>
+      </li>
+      <li>
+        <button type="button" {{on 'click' this.signOut}}>
+          Sign out
+        </button>
+      </li>
+    </ul>
+  {{else}}
+    <LinkTo @route="sign-in">
+      Sign in
+    </LinkTo>
+  {{/if}}
+</nav>
 {{outlet}}

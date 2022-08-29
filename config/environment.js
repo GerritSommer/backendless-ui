@@ -17,6 +17,11 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
+
+    contentSecurityPolicy: {
+      'connect-src': "'self' https://eu-api.backendless.com",
+      'img-src': "'self' ",
+    },
   };
 
   if (environment === 'development') {
