@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = function (environment) {
+  const isTestEnvironment = environment === 'test';
   let ENV = {
     modulePrefix: 'backendless-ui',
     environment,
@@ -19,8 +20,12 @@ module.exports = function (environment) {
     },
 
     contentSecurityPolicy: {
-      'connect-src': "'self' https://eu-api.backendless.com",
+      'connect-src': "'self'",
       'img-src': "'self' ",
+    },
+    'ember-cli-mirage': {
+      enabled: environment === 'test',
+      excludeFilesFromBuild: environment !== 'test',
     },
   };
 
