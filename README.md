@@ -1,9 +1,24 @@
 # backendless-ui
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is a starter app for [backendless.com](https://backendless.com). 
+- Already build in email/password auth with [Ember Simple Auth](https://ember-simple-auth.com/)
+- Ember Data Adapter working with the REST Api
+- Basic File uploading
+- Server mocking with [Mirage](https://www.ember-cli-mirage.com/)
 
 ## Prerequisites
+
+* Follow this quick guide to create an application: (https://backendless.com/quick-start-guide-for-rest-api/)[https://backendless.com/quick-start-guide-for-rest-api/]
+* create `.env-development` and `.env-production` files at the project root
+* Enter your apps `API_URL`, `APPLICATION_ID` and `REST_ID` in those files
+* Example:
+  ```
+  API_URL='https://eu-api.backendless.com'
+  APPLICATION_ID='xxxxxxxx-yyyy-zzzz-xxxx-yyyyyyyy'
+  REST_ID='xxxxxxxx-yyyy-zzzz-xxxx-yyyyyyyy'
+  ```
+
+
 
 You will need the following things properly installed on your computer.
 
